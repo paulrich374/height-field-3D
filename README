@@ -1,0 +1,77 @@
+/*
+  CSCI 480 Computer Graphics
+  Assignment 1: Height Fields
+  C++ starter code
+  First Author: Instructor
+  Author: Wei-Hung Liu
+*/
+
+
+PURPOSE
+
+The purpose of this assignment is to implememt height field 3D map rendering based 
+on 256x256 gray scale terrain image by using OpenGl programming.
+For the rendering part, the height field map have 3 modes rendering: point, line and fill(triangle).
+For the animaiton part, the map have transform funcitons like roate, translate, and scale 
+for user to interact with by using mouse or keyboard.
+
+
+REQUIREMENTS
+
+•Handle at least a 256x256 image for your height field at interactive frame rates (window size of 640x480). Height field manipulations should run smoothly.
+•Be able to render the height field as points, lines("wireframe"), or solid triangles (with keys for the user to switch between the three).
+•Render as a perspective view, utilizing GL's depth buffer for hidden surface removal.
+•Use input from the mouse to spin the heightfield around using glRotate.
+•Use input from the mouse to move the heightfield around using glTranslate.
+•Use input from the mouse to change the dimensions of the heightfield using glScale.
+•Color the vertices using some smooth gradient.
+•Be reasonably commented and written in an understandable manner--we will read your code.
+•Be submitted along with JPEG frames for the required animation (see below).
+•Be submitted along with a readme file documenting your program's features, describing any extra credit you have done, and anything else that you may want to bring to our attention.
+
+
+EXTRAS
+
+•Render wireframe on top of solid triangles (use glPolygonOffset to avoid z-buffer fighting).
+[Note: Press m]
+•Color the vertices based on color values taken from colors tables 
+[Note: Press 2(single color), 3(multiple color), 4(color taken from texture image lena256.bmp)]
+•Animate the height field terrain every 15 frame per second 
+•Repeat texture mapping on the surfsce of the terrain 
+[Note: Press f in fill mode and press 5 to map texure on the surface. Will show a square image to notice what image is rendered.]
+•Provide on sreen text for user manual instruction, which allows next feature to happen 
+•Allow the user to interactively deform the landscape
+
+
+COMMANDLINE EXECUTION
+
+1. make
+2. ./assign1 OhioPyle-256.jpg
+
+
+USER INTERFACE CONTROL
+
+•ctrl + mouse drag: translate
+•shift+ mouse drag: scale
+•       mouse drag: rotate
+•esc							: quit the program      
+•a  							: left rotate         
+•d  							: right rotate        
+•w  							: move forward           
+•s  							: move backward         
+•q  							: zoom out            
+•z  							: zoom in             
+•p  							: point mode          
+•l  							: line mode           
+•f  							: triangle strip mode 
+•m  							: mesh mode           
+•1  							: save screenshot     
+•2  							: color vertives - single color   													[blue]     			      
+•3  							: color vertives - multiple color 													[violet - cyan - lime - yellow - orange - pink]   			    
+•4  							: color vertives - from image     													[color taken from lena256.bmp]   			      
+•5  							: color vertives - texture mapping (in triangle strip mode) [texture:lena256.bmp]   
+•6  							: stop animation
+
+SUBMITTED FILE
+
+1. ZIP file (assign1.cpp, OhioPyle-256.jpg, Makefile, 001.jpg-300.jpg, README)
